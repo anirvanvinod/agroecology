@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    background: #276749; /* Deep Green for primary color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    animation: breatheAnimation 3s ease-in-out infinite;
+}
+
+@keyframes breatheAnimation {
+    0%, 100% {
+        background-color: #276749;
+    }
+    50% {
+        background-color: #2E8057; /* A slightly lighter shade of green for the "breathe" effect */
+    }
+}
+
+@keyframes rotateLogo {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.logo img {
+    height: 50px; /* Adjust size as needed */
+    width: 50px; /* Adjust width to match height to maintain aspect ratio */
+    border-radius: 50%; /* Makes the logo circular */
+    object-fit: cover; /* Ensures the image covers the space without distortion */
+    animation: rotateLogo 20s infinite linear; /* Applies the rotation animation */
+}
+
+nav a {
+    font-size: 18px;
+    color: #F4F1DE; /* Warm Beige for text, ensuring good contrast and readability */
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #E07A5F; /* Terracotta color for hover and active links */
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #87CEEB; /* Sky Blue for section backgrounds */
+    font-size: 100px;
+    color: #606C38; /* Innovation Grey for text */
+    font-weight: 700;
+}
+
+#home {
+    text-align: left;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.images-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust the space between images */
+    margin-bottom: 20px; /* Space between images and text */
+}
+
+.breathing-image {
+    width: 40%; /* Adjust based on preference */
+    max-width: 800px; /* Adjust if images appear too large */
+    min-width: 300px; /* Ensures images are not too small */
+    transition: transform 3s ease-in-out;
+    animation: breathe 3s ease-in-out forwards; /* Changed to run only once and remain at the final state */
+    border-radius: 10px; /* Adds rounded corners for a softer look */
+    border: 2px solid #D3D3D3; /* Subtle border color, adjust as needed */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin: 10px;
+}
+
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Slightly enlarges the image */
+    }
+}
+
+
+#home p {
+    font-size: 18px; /* Ensures text is easily readable */
+    max-width: 800px; /* Adjust based on preference */
+    margin-top: 20px; /* Adjusts spacing between text and images */
+}
+
+
+
+
+section:nth-child(odd) {
+    background: #819C8B; /* Olive Green for alternating section backgrounds */
+}
+
+#preloader {
+    background: #ffffff  url('loader.gif') no-repeat center center; /* Solar Power Yellow for preloader background */
+    background-size: 15%; /* Ensure the image fits within the container without being stretched or pixelated */
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* These flex properties center the content (if you have any additional elements inside #preloader) */
+}

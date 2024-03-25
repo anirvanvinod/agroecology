@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Landing Page</title>
+    <link rel="stylesheet" href="landing_page.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="preloader">
+        <div class="loading-container">
+            <span class="loader"><span class="loader-inner"></span></span>
+        </div>
+    </div>
+
+    <div class="landing-page">
+        <header>
+            <a href="#" class="logo"><img src="logo.jpg" alt="Logo"></a>
+            <nav>
+                <a href="#home" class="active">Home</a>
+                <a href="#about">Our Transition</a>
+                <a href="#services">Our Principles</a>
+                <a href="#portfolio">Outcomes</a>
+                <a href="#contact">Additional Resources</a>
+            </nav>
+        </header>
+        <section id="home">
+    <div class="images-container">
+        <img src="Image1.jpg" alt="First Image" class="breathing-image">
+        <img src="Image2.jpg" alt="Second Image" class="breathing-image">
+
+        
+    </div>
+    <p>Globally, the food system is failing to meet the needs of people and the planet. Industrial and globalised food production and processing is not producing nutritional food that supports cultures and traditions, protects natural resources and environments, and sustains livelihoods.</p>
+        </section>
+
+
+        <section id="about">Our Transition</section>
+        <section id="services">Our Principles</section>
+        <section id="portfolio">Outcomes</section>
+        <section id="contact">Additional Resources</section>
+
+    
+
+    <script>
+        let sections = document.querySelectorAll('section');
+        let navLinks = document.querySelectorAll('header nav a');
+        window.onscroll = () => {
+            sections.forEach(sec => {
+                let top = window.scrollY;
+                let offset = sec.offsetTop - 150;
+                let height = sec.offsetHeight;
+                let id = sec.getAttribute('id');
+                if (top >= offset && top < offset + height) {
+                    navLinks.forEach(links => {
+                        links.classList.remove('active');
+                        document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+                    });
+                };
+            });
+        };
+        window.addEventListener("load", function () {
+            var loader = document.getElementById("preloader");
+            loader.style.display = "none";
+        });
+    </script>
+</body>
+</html>
