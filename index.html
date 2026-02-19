@@ -1,30 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Introduction</title>
-</head>
-<body>
-  <div class="container">
-    <div class="split left">
-      <h1>The Present</h1>
-      <a href="#" class="btn" id="leftBtn">Take me here...?</a>
-      <div id="errorMessage" class="error-message">ERROR - 404, We are taking you to the NEAR FUTURE!</div>
-    </div>
-    <div class="split right">
-      <h1>Hello From the Near Future!</h1>
-      <a href="https://urbanharvestinitiative.carrd.co/" class="btn">THE NEAR FUTURE!</a> <!-- Update the href attribute with the URL of your main landing page -->
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rider Experience Measurement Toolkit</title>
+    <meta
+      name="description"
+      content="Interactive Rider Experience Measurement Toolkit with KPI tree, scenario simulator, prioritization scoring, and market playbook."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <canvas id="webgl-bg" aria-hidden="true"></canvas>
+    <div class="overlay" aria-hidden="true"></div>
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI?si=AMflxY3kdNmtlsxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  </div>
+    <header class="hero" role="banner">
+      <nav class="top-nav" aria-label="Primary">
+        <strong>Rider Toolkit</strong>
+        <div class="nav-links">
+          <a href="#kpi-tree">KPI Tree</a>
+          <a href="#dashboard">Dashboard</a>
+          <a href="#prioritization">Prioritization</a>
+          <a href="#playbook">Playbook</a>
+        </div>
+      </nav>
 
-  <script src="script.js"></script>
+      <div class="badge">AI + WebGL + UX-first portfolio platform</div>
+      <h1>Rider Experience Measurement Toolkit</h1>
+      <p>
+        Build confidence in rider outcomes with an interactive KPI journey model,
+        filtered performance views, scenario simulation, and action-oriented
+        market playbooks.
+      </p>
 
-</body>
+      <div class="hero-actions">
+        <a href="#dashboard" class="btn btn-primary">Explore interactive dashboard</a>
+        <button class="btn btn-secondary" id="resetAllBtn">Reset to baseline</button>
+      </div>
 
-<div id="prepreloader"></div>
+      <div class="hero-metrics" id="heroMetrics" aria-live="polite"></div>
+    </header>
 
+    <main class="layout" id="main-content">
+      <section class="panel" id="kpi-tree" aria-labelledby="kpi-title">
+        <div class="panel-title-row">
+          <h2 id="kpi-title">KPI Journey Tree</h2>
+          <span class="chip">Click a node for details</span>
+        </div>
+        <p class="muted">
+          A complete rider journey from activation to retention with ownership and
+          health tracking.
+        </p>
+
+        <div class="kpi-grid" id="kpiGrid" role="list"></div>
+        <aside class="insight" id="kpiInsight" aria-live="polite">
+          Select a KPI node to inspect definition, metric examples, and recovery actions.
+        </aside>
+      </section>
+
+      <section class="panel" id="dashboard" aria-labelledby="dashboard-title">
+        <div class="panel-title-row">
+          <h2 id="dashboard-title">Power BI Dashboard Spec (Interactive)</h2>
+          <span class="chip">Segmentation + threshold intelligence</span>
+        </div>
+
+        <div class="filters" aria-label="Segmentation filters">
+          <label for="marketFilter">Market
+            <select id="marketFilter"></select>
+          </label>
+          <label for="vehicleFilter">Vehicle Type
+            <select id="vehicleFilter"></select>
+          </label>
+          <label for="cohortFilter">Cohort
+            <select id="cohortFilter"></select>
+          </label>
+          <label for="timeFilter">Time of Day
+            <select id="timeFilter"></select>
+          </label>
+        </div>
+
+        <div class="chart-wrap">
+          <canvas id="trendChart" width="980" height="260" aria-label="KPI trend chart"></canvas>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>KPI</th>
+                <th>Current</th>
+                <th>Target</th>
+                <th>Gap</th>
+                <th>Priority Score</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="dashboardBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="prioritization" aria-labelledby="prior-title">
+        <div class="panel-title-row">
+          <h2 id="prior-title">Opportunity Prioritization Engine</h2>
+          <span class="chip">Impact × Feasibility × Urgency</span>
+        </div>
+
+        <div class="sliders">
+          <label for="impact">Impact
+            <input type="range" id="impact" min="1" max="10" value="8" />
+            <span id="impactValue">8</span>
+          </label>
+          <label for="feasibility">Feasibility
+            <input type="range" id="feasibility" min="1" max="10" value="6" />
+            <span id="feasibilityValue">6</span>
+          </label>
+          <label for="urgency">Urgency
+            <input type="range" id="urgency" min="1" max="10" value="7" />
+            <span id="urgencyValue">7</span>
+          </label>
+        </div>
+
+        <div class="score-card" aria-live="polite">
+          <strong id="priorityValue">73</strong>
+          <span id="priorityLabel">High-priority intervention recommended</span>
+        </div>
+      </section>
+
+      <section class="panel" id="playbook" aria-labelledby="playbook-title">
+        <div class="panel-title-row">
+          <h2 id="playbook-title">Local Market Team Playbook</h2>
+          <span class="chip">Failure modes + mitigation + escalation</span>
+        </div>
+        <p class="muted">Practical operational guidance for on-ground teams.</p>
+        <div id="playbookItems" class="accordion"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Portfolio project • fully local • no backend required.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
