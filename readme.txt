@@ -1,26 +1,33 @@
-Trendy – is a simple and clean one page html5 template for multipurose use built with valid HTML5 & CSS3. This template is based on latest Bootstrap framework 3.3.1 fully responsive web compatible with multi browser and devices. This template can be used for multi-purpose needs like business, consultancy, agency, personal portfolio, profile, mobile website and startup company.
+Rider Experience Measurement Toolkit (Portfolio Project)
+======================================================
 
-Key features
--------------
-Twitter Bootstrap 3.3.1
-Clean & Developer-friendly HTML5 and CSS3 code
-100% Responsive Layout Design
-One Page
-Multipurpose theme
-Google Fonts Support
-Font Awesome 
-Smooth Scrolling 
-Fully Customizable
-Contact Form
+What this is
+------------
+A fully interactive, UX-focused single-page AI-style analytics platform for rider experience measurement.
 
+Included capabilities:
+- Interactive KPI journey tree (Activation, First Ride Success, Ride Quality, Safety/Compliance, Support Resolution, Retention)
+- Dynamic segmentation filters (market, vehicle type, cohort, time-of-day) that update KPI values and prioritization
+- Visual KPI trend chart for rapid signal scanning
+- Prioritization engine (impact x feasibility x urgency)
+- Practical local market playbook with failure modes, mitigation guidance, and escalation paths
+- Animated WebGL background with reduced-motion accessibility handling
+- Keyboard-accessible controls, semantic sections, and skip-link navigation
 
-Credits :
--------
-=> Design and developed: "WebThemez"  http://webthemez.com
-=> Photos used in template: **Unsplash** - http://unsplash.com
-=> For more free web themes: http://webthemez.com
-=> Framework : http://getbootstrap.com
+Run locally
+-----------
+Option A (Python)
+1) Open a terminal in this folder
+2) Run: `python3 -m http.server 8080`
+3) Open: `http://localhost:8080`
 
-License :
--------
-**Creative Commons Attribution 3.0** - http://creativecommons.org/licenses/by/3.0/
+Option B (Node)
+1) Open a terminal in this folder
+2) Run: `npx serve .`
+3) Open the URL printed in the terminal
+
+Main files
+----------
+- index.html  -> UX structure, sections, semantic accessibility, and controls
+- styles.css  -> visual system, responsive behavior, and component styling
+- script.js   -> data model, interactivity, filtering, chart rendering, and WebGL shader animation
